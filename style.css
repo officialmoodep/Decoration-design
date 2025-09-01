@@ -1,0 +1,528 @@
+/* ------------------------------------- */
+/* استایل‌های پایه و عمومی */
+/* ------------------------------------- */
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: #f0f2f5;
+    color: #333;
+    direction: rtl; /* تنظیم جهت متن از راست به چپ */
+    scroll-behavior: smooth; /* اسکرول نرم */
+}
+
+/* ------------------------------------- */
+/* استایل‌های سربرگ و نوار ناوبری */
+/* ------------------------------------- */
+.main-header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-logo {
+    height: 35px;
+    max-width: 100px;
+    object-fit: contain;
+}
+
+.logo {
+    margin: 0;
+    font-size: 1.8em;
+    color: #2c3e50;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #3498db;
+}
+
+/* ------------------------------------- */
+/* استایل‌های بخش اصلی محتوا */
+/* ------------------------------------- */
+.main-content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2.2em;
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+    width: 80px;
+    height: 3px;
+    background-color: #3498db;
+    border-radius: 2px;
+}
+
+/* ------------------------------------- */
+/* استایل‌های بخش خدمات و کارت‌ها */
+/* ------------------------------------- */
+.services-section {
+    padding: 60px 0;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.service-card {
+    position: relative;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 22%;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    text-align: center;
+    box-sizing: border-box;
+    min-height: 60px;
+}
+
+.card-title {
+    margin: 0;
+    font-size: 1.1em;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+    line-height: 1.3;
+}
+
+/* ------------------------------------- */
+/* استایل‌های بخش پاورقی */
+/* ------------------------------------- */
+.main-footer {
+    background-color: #2c3e50;
+    color: #f4f4f4;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+/* ------------------------------------- */
+/* استایل‌های بخش بنر اصلی (hero) */
+/* ------------------------------------- */
+.hero-section {
+    background: url('https://wallpapercave.com/wp/wp10822321.jpg') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    margin-bottom: 40px;
+}
+
+.hero-text h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.call-to-action-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.call-to-action-btn:hover {
+    background-color: #2980b9;
+}
+
+/* ------------------------------------- */
+/* استایل‌های بخش گالری */
+/* ------------------------------------- */
+.portfolio-intro {
+    padding-top: 50px;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+.gallery {
+  width: min(1200px, 95vw);
+  margin: 48px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 48px;
+}
+
+.gallery-col { display: grid; gap: 56px; }
+
+.category {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: stretch;
+  gap: 24px;
+}
+
+.v-label {
+  position: relative;
+  background: #3498db;
+  color: #fff;
+  border-radius: 28px;
+  padding: 24px 10px;
+  width: 72px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,.12);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+.v-label .arrow {
+  font-style: normal;
+  opacity: .6;
+  margin-top: 6px;
+  transform: rotate(180deg);
+}
+
+.v-right {
+  order: 2;
+  justify-self: end;
+}
+
+.thumbs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  align-content: start;
+}
+
+.thumb {
+  display: block;
+  aspect-ratio: 1 / 1;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #e8e6e5;
+  box-shadow: 0 6px 16px rgba(0,0,0,.08);
+  transition: transform .25s ease, box-shadow .25s ease, filter .25s;
+  will-change: transform, filter;
+}
+.thumb:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0,0,0,.14);
+  filter: saturate(1.1);
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ------------------------------------- */
+/* استایل‌های بخش ارتباط با ما */
+/* ------------------------------------- */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-illustration {
+    flex: 1 1 450px;
+    text-align: center;
+}
+
+.contact-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.contact-form-card {
+    flex: 1 1 400px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f0f2f5;
+    font-family: 'Vazirmatn', sans-serif;
+    font-size: 1em;
+    direction: rtl;
+    color: #000000;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #3498db;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #3498db;
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #08c902;
+}
+
+/* ------------------------------------- */
+/* انیمیشن‌ها */
+/* ------------------------------------- */
+.services-section,
+.gallery,
+.contact-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.services-section.visible,
+.gallery.visible,
+.contact-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ------------------------------------- */
+/* واکنش‌گرایی (Responsive) */
+/* ------------------------------------- */
+
+/* برای تبلت‌ها و دسکتاپ‌های کوچک (تا 992px) */
+@media (max-width: 992px) {
+    .main-header {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+    .main-nav {
+        margin-top: 15px;
+    }
+    .nav-list {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hero-text h2 {
+        font-size: 2.5em;
+    }
+    .hero-text p {
+        font-size: 1.2em;
+    }
+    .section-title {
+        font-size: 2em;
+    }
+    .service-card {
+        width: 45%;
+    }
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    .gallery-col {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+}
+
+/* برای تبلت‌های کوچک و موبایل‌های بزرگ (تا 768px) */
+@media (max-width: 768px) {
+    .main-header {
+        padding: 10px 15px;
+    }
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-card {
+        width: 90%;
+    }
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    .v-right {
+        order: 0;
+        justify-self: start;
+    }
+    .contact-container {
+        flex-direction: column;
+    }
+    .contact-illustration,
+    .contact-form-card {
+        flex: 1 1 100%;
+    }
+}
+
+/* برای موبایل‌ها (تا 576px) */
+@media (max-width: 576px) {
+    .logo {
+        font-size: 1.5em;
+    }
+    .nav-list {
+        flex-wrap: wrap; /* حذف flex-direction: column و اضافه شدن flex-wrap: wrap */
+        justify-content: center;
+        gap: 15px;
+    }
+    .hero-text h2 {
+        font-size: 2em;
+    }
+    .hero-text p {
+        font-size: 1em;
+    }
+    .call-to-action-btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    .section-title {
+        font-size: 1.8em;
+    }
+    .v-label { width: 60px; padding: 18px 8px; border-radius: 22px; }
+    .thumbs { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+}
+/* ------------------------------------- */
+/* استایل‌های بخش آمار و ارقام */
+/* ------------------------------------- */
+.stats-section {
+    background-color: #2c3e50;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 10px;
+    min-width: 150px;
+}
+
+.stat-number {
+    font-size: 3em;
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 5px;
+}
+
+.stat-text {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* واکنش‌گرایی برای موبایل */
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+    }
+    .stat-item {
+        margin: 15px 0;
+    }
+}
